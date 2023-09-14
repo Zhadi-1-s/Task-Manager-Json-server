@@ -1,1 +1,12 @@
-<p>sign-in works!</p>
+<div class="container"> 
+    <h3>Log In</h3>
+    <div class="inputs">
+        <input type="text" placeholder="email" #userName required>
+        <input type="password" placeholder="password" #userPassword required> 
+        <button (click)="authService.SignIn(userName.value, userPassword.value)"><span>Sign-in</span></button>
+    </div>
+    <a routerLink="/register-user">
+        <h4>Dont have an account ?</h4>
+    </a>
+    <a routerLink="/forgot-password"><h4>Forgot Password</h4></a>
+</div>
