@@ -1,0 +1,20 @@
+.container{
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    background-color: black;
+    margin-left: 330px;
+    margin-top: 50px;
+}
+.search{
+    position: relative;
+    left: 180px;
+    top: 50px;
+}
+.search input{
+    width: 400px;
+    height: 50px;
+}
+input:focus{
+    outline: none;
+}

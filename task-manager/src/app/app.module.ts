@@ -16,6 +16,11 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import {firebaseConfig} from '../environments/environment'
 
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +39,10 @@ import {firebaseConfig} from '../environments/environment'
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    MatDialogModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

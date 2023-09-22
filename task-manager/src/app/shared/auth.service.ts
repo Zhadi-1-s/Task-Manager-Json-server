@@ -35,10 +35,19 @@ export class AuthService {
       return this.afAuth
         .signInWithEmailAndPassword(email, password)
         .then((result) => {
-          this.SetUserData(result.user);
           this.afAuth.authState.subscribe((user) => {
             if(user){
-              this.router.navigate(['dashboard']);
+              if(user.displayName){
+                this.SetUserData(user, user.displayName);
+                this.router.navigate(['dashboard']);
+                window.alert('user have their userName')
+              }
+              else{
+                const defaultDisplayName = 'User5';
+                window.alert('UserName is default')
+                this.SetUserData(user, defaultDisplayName);
+                this.router.navigate(['dashboard']);
+              }
             }
           });
         })
@@ -47,12 +56,13 @@ export class AuthService {
         });
     }
 
-    SignUp(email: string, password: string, ){
+    SignUp(email: string, password: string,userName:string ){
       return this.afAuth
         .createUserWithEmailAndPassword(email, password)
         .then((result)=> {
           this.SendVerificationMail();
-          this.SetUserData(result.user);
+          this.SetUserData(result.user, userName);
+          window.alert('user created sucesfullt')
         })
         .catch((error)=>{
           window.alert(error.message)
@@ -83,14 +93,14 @@ export class AuthService {
       return user !== null && user.emailVerified !== false ? true : false;
     }
     //* Seetting up user data when sign in with email/password
-    SetUserData(user: any){
+    SetUserData(user: any, userName: string){
       const userRef: AngularFirestoreDocument<any> = this.afs.doc(
         `users/${user.uid}`
       );
       const userData: User = {
         uid: user.uid,
         email: user.email,
-        displayName: user.displayName,
+        displayName: userName,
         photoURL: user.photoURL,
         emailVerified: user.emailVerified
       };

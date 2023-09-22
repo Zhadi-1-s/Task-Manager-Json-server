@@ -10,6 +10,8 @@ export class DashboardComponent  implements OnInit{
 
   user: any;
 
+  task:string = '';
+
   constructor(public authService: AuthService){}
 
   ngOnInit(): void {

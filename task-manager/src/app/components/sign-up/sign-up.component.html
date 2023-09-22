@@ -3,7 +3,8 @@
     <div class="inputs">
         <input type="text" placeholder="email" #userName required>
         <input type="password" placeholder="password" #userPassword required> 
-        <button (click)="authService.SignUp(userName.value, userPassword.value)"><span>Sign-up</span></button>
+        <input type="text" placeholder="UserName" #userName required>
+        <button (click)="authService.SignUp(userName.value, userPassword.value, userName.value)"><span>Sign-up</span></button>
     </div>
     <a routerLink="/sign-in"><h4>Already have an account ?</h4></a>
 </div>
