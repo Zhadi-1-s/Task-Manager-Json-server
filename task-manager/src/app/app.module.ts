@@ -16,11 +16,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import {firebaseConfig} from '../environments/environment'
 
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatInputModule} from '@angular/material/input';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 import {FormsModule} from '@angular/forms';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +27,8 @@ import {FormsModule} from '@angular/forms';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +38,6 @@ import {FormsModule} from '@angular/forms';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    MatDialogModule,
-    MatAutocompleteModule,
-    MatInputModule,
     FormsModule
   ],
   providers: [],

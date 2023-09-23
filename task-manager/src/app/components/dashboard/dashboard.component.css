@@ -5,16 +5,37 @@
     background-color: black;
     margin-left: 330px;
     margin-top: 50px;
+    border-radius: 12px;
 }
 .search{
     position: relative;
-    left: 180px;
+    left: 60px;
     top: 50px;
+    display: flex;
+    flex-direction: row;
 }
 .search input{
-    width: 400px;
-    height: 50px;
+    width: 500px;
+    height: 60px;
+    border-radius: 10px;
+    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    box-shadow: 0 0 5pt 0.5pt;
+    border: none;
+}
+.search button{
+    margin-left: 12px;
+    border-radius: 8px;
+    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    border: none;
+    width: 150px;
+    background-color: rgb(19, 97, 206);
+    color: white;
+    box-shadow: 0 0 5pt 0.5pt rgb(19,97,206);
+}
+.search button:hover{
+    transform: scale(1.025);
 }
 input:focus{
     outline: none;
+    transform: scale(1.025);
 }
