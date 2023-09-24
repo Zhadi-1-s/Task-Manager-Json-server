@@ -12,7 +12,11 @@ export class DashboardComponent  implements OnInit{
 
   user: any;
 
-  tasks:any;
+  toDo: any[] = [];
+  inProccess: any[] = [];
+  completed: any[] = []
+
+  tasks:any[] = [];
 
   constructor(public authService: AuthService, private router: Router, private taskService: TaskService){}
 
@@ -21,6 +25,7 @@ export class DashboardComponent  implements OnInit{
       this.taskService.getTasks().subscribe(
         data => {
           this.tasks = data;
+          this.filterTasks()
         },
         error => {
           console.error(error.message)
@@ -29,6 +34,13 @@ export class DashboardComponent  implements OnInit{
   }
   async initUser(){
     this.authService.SignIn = this.user;
+  }
+
+  filterTasks(){
+    this.toDo = this.tasks.filter(task => task.status === 'toDo');
+    console.log('the todo list is pushed')
+    this.inProccess = this.tasks.filter(task => task.status === 'inPorccess');
+    this.completed = this.tasks.filter(task => task.status === 'completed')
   }
 
   navigateToAdd(){

@@ -4,13 +4,22 @@
       <button (click)="navigateToAdd()">Add Task</button>
   </div>
   <div class="status">
-
+    <div id="segment" >
+      <h1>To-Do</h1>
+      <h1>{{toDo[0].title}}</h1>
+    </div>
+    <div id="segment">
+      <h1>In porccess</h1>
+    </div>
+    <div id="segment">
+      <h1>Completed</h1>
+    </div>
   </div>
-  <div class="tasks">
+  <!-- <div class="tasks">
     <ul *ngFor="let task of tasks">
       <div class="tasksEach">
         {{task.title}}
       </div>
     </ul>
-  </div>
+  </div> -->
 </div>
