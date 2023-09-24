@@ -44,7 +44,6 @@ export class AuthService {
               }
               else{
                 const defaultDisplayName = 'User5';
-                window.alert('UserName is default')
                 this.SetUserData(user, defaultDisplayName);
                 this.router.navigate(['dashboard']);
               }

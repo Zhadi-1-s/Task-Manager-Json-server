@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/auth.service';
+import { TaskService } from 'src/app/shared/task.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,14 +12,22 @@ export class DashboardComponent  implements OnInit{
 
   user: any;
 
-  task:string = '';
+  tasks:any;
 
-  constructor(public authService: AuthService, private router: Router){}
+  constructor(public authService: AuthService, private router: Router, private taskService: TaskService){}
 
   ngOnInit(): void {
       this.initUser();
+      this.taskService.getTasks().subscribe(
+        data => {
+          this.tasks = data;
+        },
+        error => {
+          console.error(error.message)
+        }
+      )
   }
-  initUser(){
+  async initUser(){
     this.authService.SignIn = this.user;
   }
 

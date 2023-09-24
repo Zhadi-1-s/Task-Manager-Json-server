@@ -19,6 +19,7 @@ import {firebaseConfig} from '../environments/environment'
 
 import {FormsModule} from '@angular/forms';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

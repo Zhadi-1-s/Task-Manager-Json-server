@@ -10,7 +10,7 @@ export class AddTaskComponent implements OnInit {
 
 
 
-  isCompleted: boolean = false;
+  status: 'completed' | 'inProccess' | 'toDo' = 'toDo';
 
   constructor(private taskService: TaskService){}
 
@@ -22,10 +22,9 @@ export class AddTaskComponent implements OnInit {
     const newTask = {
       title,
       description,
-      isCompleted: this.isCompleted
+      status: this.status
     };
-    this.taskService.createTask(newTask).
-
+    this.taskService.createTask(newTask)
   }
 
 

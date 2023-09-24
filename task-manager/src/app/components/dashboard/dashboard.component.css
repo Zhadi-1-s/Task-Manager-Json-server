@@ -6,6 +6,7 @@
     margin-left: 330px;
     margin-top: 50px;
     border-radius: 12px;
+    
 }
 .search{
     position: relative;
@@ -38,4 +39,22 @@
 input:focus{
     outline: none;
     transform: scale(1.025);
+}
+.status{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    
+}
+.tasks{
+    position: relative;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+.tasksEach{
+    width: 400px;
+    height: 50px;
+    background-color: white;
+
 }
