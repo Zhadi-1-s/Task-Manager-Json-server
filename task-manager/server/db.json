@@ -5,6 +5,18 @@
         "title":"Coding",
         "description":"I need to write a code to my project, untill 27.09",
         "status":"inProccess"
-       } 
+       } ,
+       {
+        "id":2,
+        "title":"Write conpect",
+        "description":"Need to write concpec in history",
+        "status":"toDo"
+       },
+       {
+        "id":3,
+        "title":"Codewars coding",
+        "description":"i need to more practice writing alghorithms",
+        "status":"completed"
+       }
     ]
 }

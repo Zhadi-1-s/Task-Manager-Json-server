@@ -3,16 +3,30 @@
       <input type="text">
       <button (click)="navigateToAdd()">Add Task</button>
   </div>
-  <div class="status">
-    <div id="segment" >
-      <h1>To-Do</h1>
-      <h1>{{toDo[0].title}}</h1>
+  <div class="status" >
+    <div id="segment" *ngFor="let task of toDo">
+      <div class="type">
+        <h1>{{task.status}}</h1>
+      </div>
+        <div class="title">
+          {{task.title}}
+        </div>
     </div>
-    <div id="segment">
-      <h1>In porccess</h1>
+    <div id="segment" *ngFor="let task of inProccess">
+      <div class="type">
+        <h1>{{task.status}}</h1>
+      </div>
+      <div class="title">
+        
+      </div>
     </div>
-    <div id="segment">
-      <h1>Completed</h1>
+    <div id="segment" *ngFor="let task of completed">
+      <div class="type">
+        <h1>{{task.status}}</h1>
+      </div>
+      <div class="title">
+
+      </div>
     </div>
   </div>
   <!-- <div class="tasks">
