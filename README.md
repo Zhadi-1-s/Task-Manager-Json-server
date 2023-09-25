@@ -1,2 +1,7 @@
 # Task-Manager-Json-server
-There is task manager, to train pattern Di,MVC
+Simple taskManager to train pattern DI
+
+# Authentication 
+I am using Firebase authentication to consume authentication system
+
+# Angular version --15.2.9
