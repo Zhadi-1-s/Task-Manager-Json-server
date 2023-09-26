@@ -11,22 +11,25 @@
         <div class="title">
           {{task.title}}
         </div>
+        <button>see all</button>
     </div>
     <div id="segment" *ngFor="let task of inProccess">
       <div class="type">
         <h1>{{task.status}}</h1>
       </div>
       <div class="title">
-        
+        {{task.title}}
       </div>
+      <button>see all</button>
     </div>
     <div id="segment" *ngFor="let task of completed">
       <div class="type">
         <h1>{{task.status}}</h1>
       </div>
       <div class="title">
-
+        {{task.title}}
       </div>
+      <button>see all</button>
     </div>
   </div>
   <!-- <div class="tasks">

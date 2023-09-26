@@ -20,6 +20,9 @@ import {firebaseConfig} from '../environments/environment'
 import {FormsModule} from '@angular/forms';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ToDoComponent } from './components/to-do/to-do.component';
+import { InProccessComponent } from './components/in-proccess/in-proccess.component';
+import { CompletedComponent } from './component/completed/completed.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { HttpClientModule } from '@angular/common/http';
     SignUpComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    ToDoComponent,
+    InProccessComponent,
+    CompletedComponent
   ],
   imports: [
     BrowserModule,
