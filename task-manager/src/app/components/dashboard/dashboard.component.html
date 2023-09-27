@@ -6,7 +6,7 @@
   <div class="status" >
     <div id="segment" *ngFor="let task of toDo">
       <div class="type">
-        <h1>{{task.status}}</h1>
+        <h1>ToDO</h1>
       </div>
         <div class="title">
           {{task.title}}
@@ -15,7 +15,7 @@
     </div>
     <div id="segment" *ngFor="let task of inProccess">
       <div class="type">
-        <h1>{{task.status}}</h1>
+        <h1>In Progress</h1>
       </div>
       <div class="title">
         {{task.title}}
@@ -24,7 +24,7 @@
     </div>
     <div id="segment" *ngFor="let task of completed">
       <div class="type">
-        <h1>{{task.status}}</h1>
+        <h1>Completed</h1>
       </div>
       <div class="title">
         {{task.title}}
