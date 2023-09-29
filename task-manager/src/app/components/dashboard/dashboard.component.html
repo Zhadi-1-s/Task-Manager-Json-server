@@ -1,6 +1,10 @@
 <div class="container">
   <div class="search">
-      <input type="text">
+      <h1>Simple Task Manager</h1>
+     
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" style="width: 80px;">
+        <path fill="#185abd" d="M24.48,29.316l-9.505,9.505L1.588,25.434c-0.784-0.784-0.784-2.054,0-2.838l6.667-6.667	c0.784-0.784,2.054-0.784,2.838,0L24.48,29.316z"></path><linearGradient id="5qKAcydctVb3hkGT27jhwa_HpPqCqynotVp_gr1" x1="14.572" x2="43.188" y1="38.199" y2="9.583" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4191fd"></stop><stop offset="1" stop-color="#55acfd"></stop></linearGradient><path fill="url(#5qKAcydctVb3hkGT27jhwa_HpPqCqynotVp_gr1)" d="M17.797,41.642l-6.667-6.667c-0.784-0.784-0.784-2.054,0-2.838L36.907,6.358	c0.784-0.784,2.054-0.784,2.838,0l6.667,6.667c0.784,0.784,0.784,2.054,0,2.838L20.634,41.642	C19.851,42.425,18.58,42.425,17.797,41.642z"></path>
+        </svg>
       <button (click)="navigateToAdd()">Add Task</button>
   </div>
   <div class="status" >
@@ -9,33 +13,36 @@
         <h1>ToDO</h1>
       </div>
         <div class="title">
-          {{task.title}}
+          <span>{{task.title}}</span>
+          
         </div>
-        <button>see all</button>
+ 
     </div>
     <div id="segment" *ngFor="let task of inProccess">
       <div class="type">
         <h1>In Progress</h1>
       </div>
       <div class="title">
-        {{task.title}}
+        <span>{{task.title}}</span>
+        
       </div>
-      <button>see all</button>
+
     </div>
     <div id="segment" *ngFor="let task of completed">
       <div class="type">
         <h1>Completed</h1>
       </div>
       <div class="title">
-        {{task.title}}
+        <span>{{task.title}}</span>
+       
       </div>
-      <button>see all</button>
+    
     </div>
   </div>
   <!-- <div class="tasks">
     <ul *ngFor="let task of tasks">
       <div class="tasksEach">
-        {{task.title}}
+        <span>{{task.title}}</span>
       </div>
     </ul>
   </div> -->

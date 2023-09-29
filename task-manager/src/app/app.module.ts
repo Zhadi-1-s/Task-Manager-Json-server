@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToDoComponent } from './components/to-do/to-do.component';
 import { InProccessComponent } from './components/in-proccess/in-proccess.component';
 import { CompletedComponent } from './components/completed/completed.component';
+import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CompletedComponent } from './components/completed/completed.component';
     ToDoComponent,
     InProccessComponent,
     CompletedComponent,
+    TaskComponent,
   ],
   imports: [
     BrowserModule,
