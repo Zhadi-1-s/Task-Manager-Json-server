@@ -51,14 +51,20 @@
     margin-top: 20px;
     margin-bottom: -80px;
 }
-/* .typed-out{
-    overflow: hidden;
-    border-right: .15em solid orange;
-    font-size: 1.6rem;
-    width: 0;
-    animation: typing 5s forwards;
+.buttons{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    top: 120px;
+    margin-bottom: -30px;
+    left: 500px;
+    width: 250px;
+    justify-content: space-around;
 }
-@keyframes typing{
-    from {width: 0;}
-    to {width: 100%;}
+/* .buttons button{
+    border-radius: 8px;
+    width: 110px;
+    height: 37px;
+    background-color: rgb(19, 97, 206);
+    box-shadow: 0 0 5pt 0.5pt rgb(19,97,206);
 } */

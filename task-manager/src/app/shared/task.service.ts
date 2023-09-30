@@ -25,4 +25,14 @@ export class TaskService {
     return this.http.get<any>(apiUrlById)
   }
 
+  putTask(task:any):Observable<any>{
+    const url = `${this.apiUrl}/${task.id}`;
+    return this.http.put(url, task)
+  }
+
+  deleteTask(id:number){
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url) 
+  }
+
 }

@@ -8,26 +8,25 @@
       <button (click)="navigateToAdd()">Add Task</button>
   </div>
   <div class="status" >
+
     <div id="segment" *ngFor="let task of toDo" (click)="navigateToTask(task.id)">
       <div class="type">
         <h1>ToDO</h1>
       </div>
         <div class="title">
           <span>{{task.title}}</span>
-          
         </div>
  
     </div>
-    <div id="segment" *ngFor="let task of inProccess">
+    <div id="segment" *ngFor="let task of inProccess" (click)="navigateToTask(task.id)">
       <div class="type">
         <h1>In Progress</h1>
       </div>
       <div class="title">
         <span>{{task.title}}</span>
       </div>
-
     </div>
-    <div id="segment" *ngFor="let task of completed">
+    <div id="segment" *ngFor="let task of completed" (click)="navigateToTask(task.id)">
       <div class="type">
         <h1>Completed</h1>
       </div>

@@ -9,7 +9,8 @@
         <h2>Status: {{task.status}}</h2>
     </div>
     <div class="buttons">
-        
+        <button type="button" class="btn btn-primary" style="width: 100px;" (click)="setUpdate(description.value)">Confirm</button>
+        <button type="button" class="btn btn-danger" style="width: 100px;" (click)="deleteTask(task.id)">Delete</button>
     </div>
     <div class="text">
         <textarea name="description" cols="30" rows="10" #description >{{task.description}}</textarea>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TaskService } from 'src/app/shared/task.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class TaskComponent  implements OnInit{
 
   task:any
 
-  constructor(private taskService : TaskService, private route: ActivatedRoute){}
+  constructor(private taskService : TaskService, private route: ActivatedRoute, private router: Router){}
 
   ngOnInit(): void {
       this.route.paramMap.subscribe((params :any) => {
@@ -24,8 +24,26 @@ export class TaskComponent  implements OnInit{
       })
   }
 
-  setText(text: string){
-      console.log(text)
+  setUpdate(desc: string){
+    this.task.description = desc;
+    this.taskService.putTask(this.task).subscribe(
+      () => {
+        window.alert('Changes are detected')
+      },
+      error => {
+        window.Error(error)
+      }
+    )
   }
-
+    deleteTask(id: number){
+      this.taskService.deleteTask(id).subscribe(
+        () =>{
+          window.alert('task deleted succesfully')
+        },
+        error => {
+          window.Error(error)
+        }
+      )
+      this.router.navigate(['dashboard']);
+    }
 }
