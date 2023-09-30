@@ -8,7 +8,7 @@
       <button (click)="navigateToAdd()">Add Task</button>
   </div>
   <div class="status" >
-    <div id="segment" *ngFor="let task of toDo">
+    <div id="segment" *ngFor="let task of toDo" (click)="navigateToTask(task.id)">
       <div class="type">
         <h1>ToDO</h1>
       </div>

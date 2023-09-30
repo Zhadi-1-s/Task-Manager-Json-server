@@ -7,6 +7,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { AuthGuard } from './shared/auth.guard';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import { TaskComponent } from './components/task/task.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  {path:'add-task', component:AddTaskComponent}
+  {path:'add-task', component:AddTaskComponent},
+  {path:'task/:id', component:TaskComponent}
 ];
 
 @NgModule({

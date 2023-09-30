@@ -20,6 +20,9 @@ export class TaskService {
     this.http.post<any>(this.apiUrl, task);
   }
 
-  
+  getTaskById(id: number):Observable<any>{
+    const apiUrlById = `${this.apiUrl}/${id}`
+    return this.http.get<any>(apiUrlById)
+  }
 
 }

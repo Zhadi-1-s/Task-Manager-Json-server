@@ -48,5 +48,7 @@ export class DashboardComponent  implements OnInit{
   navigateToAdd(){
     this.router.navigate(['add-task']);
   }
-
+  navigateToTask(id:number){
+    this.router.navigate(['/task', id]);
+  }
 }
