@@ -38,10 +38,7 @@ export class DashboardComponent  implements OnInit{
 
   filterTasks(){
     this.toDo = this.tasks.filter(task => task.status === 'toDo');
-    console.log(this.toDo)
-    console.log(this.tasks)
     this.inProccess = this.tasks.filter(task => task.status === 'inProccess');
-    console.log(this.inProccess)
     this.completed = this.tasks.filter(task => task.status === 'completed')
   }
 

@@ -17,7 +17,7 @@ export class TaskService {
   }
 
   createTask(task:any){
-    this.http.post<any>(this.apiUrl, task);
+    return this.http.post<any>(this.apiUrl, task);
   }
 
   getTaskById(id: number):Observable<any>{

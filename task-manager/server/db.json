@@ -11,6 +11,18 @@
       "title": "Codewars ",
       "description": "i need to more practice writing alghorithms",
       "status": "completed"
+    },
+    {
+      "id": "16f2fe4c-6e1e-45d1-8585-78a554240dec",
+      "title": "Theory",
+      "description": "I need to more learn in theory angular",
+      "status": "toDo"
+    },
+    {
+      "id": "6af671d9-28e8-4e3b-94a6-a66bd7153900",
+      "title": "test title",
+      "description": "testing just",
+      "status": "toDo"
     }
   ]
 }

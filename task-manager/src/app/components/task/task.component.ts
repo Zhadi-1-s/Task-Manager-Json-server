@@ -11,7 +11,7 @@ export class TaskComponent  implements OnInit{
 
   task:any
 
-  constructor(private taskService : TaskService, private route: ActivatedRoute, private router: Router){}
+  constructor(private taskService : TaskService, private route: ActivatedRoute, public router: Router){}
 
   ngOnInit(): void {
       this.route.paramMap.subscribe((params :any) => {
@@ -29,6 +29,7 @@ export class TaskComponent  implements OnInit{
     this.taskService.putTask(this.task).subscribe(
       () => {
         window.alert('Changes are detected')
+        this.router.navigate(['dashboard'])
       },
       error => {
         window.Error(error)
