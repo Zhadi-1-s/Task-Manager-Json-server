@@ -9,6 +9,6 @@ I am using Firebase authentication to consume authentication system
 # To install and run the project
 1. git clone https://github.com/Zhadi-1-s/Task-Manager-Json-server.git 
 2. npm install (This command will download all the packages that project allows)
-3. npm run serve (I use json server to consume backend part)
+3. npm run server (I use json server to consume backend part)
 4. ng serve --open (Open the NodeJs server and you can see this application)
 
