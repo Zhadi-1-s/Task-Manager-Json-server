@@ -16,9 +16,14 @@ export class TaskComponent  implements OnInit{
   ngOnInit(): void {
       this.route.paramMap.subscribe((params :any) => {
         const taskId = +params.get('id');
+        console.log(taskId)
         this.taskService.getTaskById(taskId).subscribe(
           data => {
             this.task = data
+            console.log('the data is ' , data)
+          },
+          error => {
+            console.error(error.message)
           }
         )
       })
