@@ -12,3 +12,7 @@ I am using Firebase authentication to consume authentication system
 3. npm run server (I use json server to consume backend part)
 4. ng serve --open (Open the NodeJs server and you can see this application)
 
+# About project 
+ - Taking data from server using api
+ - Json-server to keep data
+ - Bootstrap to compact design
